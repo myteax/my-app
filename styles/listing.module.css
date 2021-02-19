@@ -1,0 +1,24 @@
+.li_djs{
+   text-align: center;
+}
+.li_du8{
+    background-color: rgb(85, 127, 219);
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px; 
+}
+
+.li_img{
+    text-align: center !important;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lidu3{
+    margin-top: 20px;
+
+}

@@ -1,0 +1,46 @@
+.vw_flex{
+    /* display: flex; */
+    /* flex-grow: 1 !important */
+}
+
+.vw_jfjf{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.vw_img{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.vw_diva{
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.vw_jfue2{
+    font-size: 13px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.vw_fi33{
+    margin-left: 10px;
+    font-size: 14px;
+
+}
+
+.vw_83k{
+    font-size: 13px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    background-color: red;
+}
+
+.vw_fjr9{
+    font-size: 18px !important; 
+    margin-right: 15px;
+    margin-left: 5px;
+
+}
