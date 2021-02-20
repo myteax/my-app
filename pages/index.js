@@ -3,6 +3,7 @@ import { Container } from "@material-ui/core";
 import Navbar from "../components/Navbar";
 import Searchpane from "../components/Searchpane";
 import Viewer from "../components/Viewer";
+import { Waypoint } from "react-waypoint";
 import Axios from "axios";
 
 const Index = () => {
@@ -20,13 +21,13 @@ const Index = () => {
       }
     });
   };
-  useEffect(() => {
-    window.onscroll = function (ev) {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        fee();
-      }
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.onscroll = function (ev) {
+  //     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+  //       fee();
+  //     }
+  //   };
+  // }, []);
 
   const fee = async () => {
     await Axios.get("/api/getdata").then((res) => {
@@ -47,6 +48,7 @@ const Index = () => {
       <Navbar />
       <Searchpane sett={sett} />
       <Viewer data={data} />
+      <Waypoint onEnter={fee} />
     </Container>
   );
 };
