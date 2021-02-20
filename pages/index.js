@@ -6,7 +6,8 @@ import Viewer from "../components/Viewer";
 import Axios from "axios";
 
 const Index = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
+  const [datad, setDatad] = useState([]);
 
   useEffect(() => {
     fetchy();
@@ -16,6 +17,23 @@ const Index = () => {
     await Axios.get("/api/getdata").then((res) => {
       if (res) {
         setData(res.data);
+      }
+    });
+  };
+  useEffect(() => {
+    window.onscroll = function (ev) {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        fee();
+      }
+    };
+  }, []);
+
+  const fee = async () => {
+    await Axios.get("/api/getdata").then((res) => {
+      if (res) {
+        setData((prevdata) => {
+          return [...new Set([...prevdata, ...res.data])];
+        });
       }
     });
   };
